@@ -1,0 +1,210 @@
+.pricing {
+  @include padding-adaptive;
+  border-spacing: 0px;
+  display: block;
+
+
+  @media (min-width: $tablet) {
+    display: table;
+    width: 100%;
+  }
+
+
+  &__caption {
+    display: block;
+    caption-side: bottom;
+    max-width: 500px;
+    text-align: left;
+    padding-top: 16px;
+    padding-right: 16px;
+
+    @media (min-width: $tablet) {
+      @include padding-adaptive;
+      display: table-caption;
+      padding-top: 24px;
+    }
+
+    @media (min-width: $dekstop) {
+      padding-top: 32px;
+    }
+  }
+
+  &__header {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: table-header-group;
+    }
+  }
+
+  &__head {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-medium;
+    text-align: left;
+    padding-top: 31px;
+    padding-bottom: 19px;
+    @media (min-width: $tablet) {
+      display: table-cell;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 16px;
+    flex-wrap: wrap;
+    height: 168px;
+    width: 228px;
+    background-color: $color-white;
+    border-radius: 6px;
+
+    @media (min-width: $tablet) {
+      box-sizing: border-box;
+      display: table-row;
+      padding: 0;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+
+      &:hover .table__data {
+        @media (hover: hover) {
+          color: $color-company;
+        }
+      }
+
+      &:last-child .table__data {
+        border: none;
+      }
+
+      &::before, &::after {
+        content: '';
+        height: 100%;
+        width: 16px;
+        display: block;
+      }
+    }
+  }
+
+  &__data {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $color-dark;
+
+
+    &::before {
+      content: '';
+      font-family: $font-family;
+      font-size: 14px;
+      line-height: 16px;
+      color: $color-medium;
+      opacity: 0.72;
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: $tablet) {
+      display: table-cell;
+      box-sizing: border-box;
+      padding: 23px 0;
+      border-bottom: 1px solid $color-border;
+
+      &:not(:last-child){
+        padding-right: 8px;
+      }
+
+      &:last-child button{
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__servise::before {
+    display: block;
+    content: 'Ремонтные услуги';
+
+    @media (min-width: $tablet) {
+      content: '';
+    }
+  }
+
+  &__price::before {
+    display: block;
+    content: 'Цена';
+
+    @media (min-width: $tablet) {
+      content: '';
+    }
+  }
+
+  &__time::before {
+    display: block;
+    content: 'Срок';
+
+    @media (min-width: $tablet) {
+      content: '';
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    @media (min-width: $tablet) {
+      position: static;
+    }
+  }
+
+  &__body {
+    display: flex;
+    padding-top: 16px;
+
+    @media (min-width: $tablet) {
+      display: table-row-group;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 3px $color-white;
+      border-radius: 6px;
+      background-color: $color-white;
+    }
+  }
+
+  &__link {
+    font-family: $font-family;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-dark;
+    text-decoration: none;
+    margin-top: 16px;
+    margin-right: 16px;
+    display: inline-block;
+    align-items: center;
+
+    &:hover {
+      @media (hover: hover) {
+        font-size: 18px;
+      }
+    }
+
+    & button {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  &__footer {
+    display: block;
+    margin: 16 auto 16 auto;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}

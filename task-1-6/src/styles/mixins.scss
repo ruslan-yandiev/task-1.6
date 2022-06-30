@@ -1,0 +1,42 @@
+@mixin padding-adaptive {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: $tablet) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: $dekstop) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@mixin margin-adaptive {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  @media (min-width: $tablet) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media (min-width: $dekstop) {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
+@mixin padding-bottom {
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $dekstop) {
+    padding-bottom: 50px;
+  }
+}
+

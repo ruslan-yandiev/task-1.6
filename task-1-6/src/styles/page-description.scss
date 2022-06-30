@@ -1,0 +1,45 @@
+.page-description {
+  @include padding-bottom;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: inset 0px -1px 0px 0px $color-support;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    gap: 36px;
+  }
+
+  &__text-wrapper {
+    @include padding-adaptive;
+    padding-right: 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    max-height: 90px;
+    overflow: hidden;
+    gap: 18px;
+    transition: max-height 0.5s ease-in-out;
+
+    @media (min-width: $tablet) {
+      gap: 20px;
+      max-height: 160px;
+    }
+  }
+
+  &__img {
+    align-self: flex-start;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: 48%;
+      margin-right: 25px;
+    }
+  }
+}

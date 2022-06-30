@@ -1,0 +1,52 @@
+.page-navigation {
+  margin-bottom: 24px;
+  overflow-x: scroll;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $dekstop) {
+    margin-bottom: 12px;
+    overflow-x: auto;
+  }
+
+  &__list {
+    @include padding-adaptive;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    row-gap: 6px;
+
+
+    @media (min-width: $dekstop) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    padding: 8px 16px;
+
+    &--active {
+      border: 2px solid $color-support;
+      border-radius: 6px;
+      background: #FFFFFF;
+    }
+
+    &:not(.page-navigation__item--active):hover {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-medium;
+    text-decoration: none;
+    text-decoration-color: $color-company;
+  }
+}

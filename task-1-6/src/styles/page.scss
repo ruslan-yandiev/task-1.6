@@ -1,0 +1,17 @@
+.page-contener {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: $dekstop) {
+    flex-direction: row;
+  }
+
+  &--freeze {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}

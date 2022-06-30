@@ -1,0 +1,27 @@
+.page-caption {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: $color-dark;
+  margin: 0;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../assets/img/highlight.svg);
+    height: 40px;
+    width: 4px;
+    vertical-align: top;
+    margin-right: 12px;
+
+    @media (min-width: $tablet) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: $dekstop) {
+      margin-right: 30px;
+    }
+  }
+}

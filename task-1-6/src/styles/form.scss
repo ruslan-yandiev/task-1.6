@@ -1,0 +1,103 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 650px;
+  width: 100%;
+  max-width: 440px;
+  background-color: $color-white;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  transform: translateX(120%);
+  transition: transform 0.5s;
+
+  &__close {
+    margin-top: 24px;
+    margin-left: 16px;
+
+    @media (min-width: 526px) {
+      position: absolute;
+      margin: 0;
+      top: 32px;
+      left: -72px;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $color-dark;
+    margin-top: 32px;
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url(../assets/img/highlight.svg);
+      height: 40px;
+      width: 4px;
+      margin-right: 12px;
+
+      @media (min-width: $tablet) {
+        margin-right: 20px;
+      }
+
+      @media (min-width: $dekstop) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__input {
+    @include margin-adaptive;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-dark;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+
+    &::placeholder {
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: $color-light;
+    }
+  }
+
+  &__message {
+    @include padding-adaptive;
+    margin: 0 0 24px 0;
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-medium;
+  }
+
+  &__link {
+    color: $color-company;
+    text-decoration: none;
+
+    &:hover {
+      font-size: 18px;
+    }
+  }
+
+  &__submit {
+    @include margin-adaptive;
+    align-self: flex-end;
+    margin-bottom: 40px;
+  }
+}
+
+

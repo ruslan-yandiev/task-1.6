@@ -1,0 +1,120 @@
+.button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out;
+  background-repeat: no-repeat;
+  outline: none;
+
+  &--type--close {
+    background-image: url(../assets/img/burger-close.svg);
+  }
+
+  &--type--search {
+    background-image: url(../assets/img/search.svg);
+  }
+
+  &--type--call {
+    background-image: url(../assets/img/call.svg);
+  }
+
+  &--type--chat {
+    background-image: url(../assets/img/chat.svg);
+  }
+
+  &--type--profile {
+    background-image: url(../assets/img/profile.svg);
+  }
+
+  &--type--burger {
+    background-image: url(../assets/img/burger.svg);
+  }
+
+  &--type--repair {
+    background-image: url(../assets/img/repair.svg);
+  }
+
+  &--type--status {
+    background-image: url(../assets/img/checkstatus.svg);
+  }
+
+  &--type--go {
+    background-image: url(../assets/img/go.svg);
+  }
+
+  &--type--order {
+    background-color: $color-company;
+    background-image: url(../assets/img/goside.svg);
+    background-position:  right 8px top 50%;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    text-align: left;
+    padding-left: 12px;
+
+    &::before {
+      content: 'Заказать';
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+
+  &--type--submit {
+    background-color: $color-company;
+    background-image: url(../assets/img/goside.svg);
+    background-position:  right 8px top 50%;
+    width: 136px;
+    height: 32px;
+    border-radius: 16px;
+    text-align: left;
+    padding-left: 20px;
+
+    &::before {
+      content: 'Отправить';
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+
+  &--type--line {
+    background-image: url(../assets/img/line.svg);
+    background-position: 50% 50%;
+    width: 24px;
+    height: 24px;
+  }
+
+  &--with-label {
+    display: flex;
+    align-items: center;
+    width: auto;
+    border-radius: 0;
+    text-decoration: none;
+    gap: 8px;
+  }
+
+  &__label {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-dark;
+    text-decoration: none;
+  }
+}

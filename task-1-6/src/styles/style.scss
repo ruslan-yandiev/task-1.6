@@ -1,0 +1,46 @@
+@import '~normalize.css';
+
+html {
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.flex-contener {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+@import './fonts.scss';
+@import './var.scss';
+@import './mixins.scss';
+@import './swiper.scss';
+@import './button.scss';
+@import './card.scss';
+@import './paragraph.scss';
+@import './read-more.scss';
+@import './contact.scss';
+@import './technical.scss';
+@import './logo.scss';
+@import './navigation.scss';
+@import './contacts.scss';
+@import './lang.scss';
+@import './pricing.scss';
+@import './header-modul.scss';
+@import './page-caption.scss';
+@import './page-navigation.scss';
+@import './page-description.scss';
+@import './page-footer.scss';
+@import './modal.scss';
+@import './form.scss';
+@import './brands.scss';
+@import './repair.scss';
+@import './prices.scss';
+@import './menu.scss';
+@import './mobile-menu.scss';
+@import './servises.scss';
+@import './page.scss';
+@import './open.scss';

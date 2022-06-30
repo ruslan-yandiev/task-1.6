@@ -1,0 +1,59 @@
+.brands {
+  @include padding-bottom;
+  margin: 0;
+  background: $color-background;
+  box-shadow: inset 0px -1px 0px 0px $color-support;
+
+  &__list {
+    @include padding-adaptive;
+    padding-top: 16px;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    align-content: flex-start;
+    box-sizing: border-box;
+    transition: max-height 0.5s ease-in-out;
+
+    @media (min-width: $tablet) {
+      flex-wrap: wrap;
+      padding-right: 24px;
+      row-gap: 16px;
+      column-gap: 24px;
+      padding-top: 24px;
+      max-height: 184px;
+      overflow: hidden;
+    }
+
+    @media (min-width: $dekstop) {
+      padding-right: 32px;
+      column-gap: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    height: 72px;
+    width: 240px;
+    outline: none;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet) {
+      width: 224px;
+      flex-grow: 1;
+    }
+
+    @media (min-width: $dekstop) {
+      width: 240px;
+    }
+  }
+
+  &__read-more {
+    @include padding-adaptive;
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      margin-top: 24px;
+    }
+  }
+}
